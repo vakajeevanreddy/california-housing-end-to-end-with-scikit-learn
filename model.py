@@ -30,8 +30,16 @@ def income_categories(df):
     categories = pd.cut(df["median_income"], bins = bins, labels = labels)
     return categories.astype(int)
 
-# Step 3 - stratified_split (not yet solved)
-# TODO: implement
+# Step 3 - stratified_split
+import numpy as np
+import pandas as pd
+from sklearn.model_selection import train_test_split
+
+def stratified_split(df, test_size=0.2, random_state:int = 42):
+    # TODO: train_test_split stratified on income_categories(df); return (train_set, test_set).
+    start_labels = income_categories(df)
+    train_set,test_set = train_test_split(df,test_size = test_size,random_state = random_state,stratify = start_labels)
+    return train_set,test_set
 
 # Step 4 - explore_correlations (not yet solved)
 # TODO: implement
