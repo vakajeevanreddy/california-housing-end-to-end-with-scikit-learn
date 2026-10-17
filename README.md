@@ -16,7 +16,7 @@ python scaffold.py
 - [x] **4.** explore_correlations
 - [x] **5.** add_ratio_features
 - [x] **6.** split_features_labels
-- [ ] **7.** ClusterSimilarity
+- [x] **7.** ClusterSimilarity
 - [ ] **8.** numeric_pipeline
 - [ ] **9.** categorical_pipeline
 - [ ] **10.** build_preprocessing
