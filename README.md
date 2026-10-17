@@ -11,7 +11,7 @@ python scaffold.py
 ## Steps
 
 - [x] **1.** load_housing
-- [ ] **2.** income_categories
+- [x] **2.** income_categories
 - [ ] **3.** stratified_split
 - [ ] **4.** explore_correlations
 - [ ] **5.** add_ratio_features
