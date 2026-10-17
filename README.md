@@ -14,7 +14,7 @@ python scaffold.py
 - [x] **2.** income_categories
 - [x] **3.** stratified_split
 - [x] **4.** explore_correlations
-- [ ] **5.** add_ratio_features
+- [x] **5.** add_ratio_features
 - [ ] **6.** split_features_labels
 - [ ] **7.** ClusterSimilarity
 - [ ] **8.** numeric_pipeline
