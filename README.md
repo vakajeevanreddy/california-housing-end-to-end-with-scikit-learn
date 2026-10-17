@@ -15,7 +15,7 @@ python scaffold.py
 - [x] **3.** stratified_split
 - [x] **4.** explore_correlations
 - [x] **5.** add_ratio_features
-- [ ] **6.** split_features_labels
+- [x] **6.** split_features_labels
 - [ ] **7.** ClusterSimilarity
 - [ ] **8.** numeric_pipeline
 - [ ] **9.** categorical_pipeline
