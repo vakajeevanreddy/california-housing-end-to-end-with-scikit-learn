@@ -105,8 +105,17 @@ def numeric_pipeline():
         StandardScaler()
     )
 
-# Step 9 - categorical_pipeline (not yet solved)
-# TODO: implement
+# Step 9 - categorical_pipeline
+import pandas as pd
+from sklearn.pipeline import make_pipeline
+from sklearn.impute import SimpleImputer
+from sklearn.preprocessing import OneHotEncoder
+
+def categorical_pipeline():
+    return make_pipeline(
+        SimpleImputer(missing_values = None,strategy="most_frequent"),
+        OneHotEncoder(handle_unknown="ignore")
+    )
 
 # Step 10 - build_preprocessing (not yet solved)
 # TODO: implement
