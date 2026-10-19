@@ -160,8 +160,16 @@ def rmse(y_true, y_pred):
         raise ValueError("Shapes of y_true and y_pred must be match")
     return float(np.sqrt(np.mean((y_true-y_pred)** 2 )))
 
-# Step 12 - dummy_baseline_rmse (not yet solved)
-# TODO: implement
+# Step 12 - dummy_baseline_rmse
+import numpy as np
+import pandas as pd
+from sklearn.dummy import DummyRegressor
+def dummy_baseline_rmse(X, y):
+    # TODO: fit DummyRegressor(strategy='mean') and return its RMSE on (X, y).
+    dummy = DummyRegressor(strategy = "mean")
+    dummy.fit(X,y)
+    y_pred = dummy.predict(X)
+    return rmse(y,y_pred)
 
 # Step 13 - cross_val_rmse (not yet solved)
 # TODO: implement
