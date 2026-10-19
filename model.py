@@ -148,8 +148,17 @@ def build_preprocessing(n_clusters=10, gamma=1.0, random_state=42):
     )
     return preprocess
 
-# Step 11 - rmse (not yet solved)
-# TODO: implement
+# Step 11 - rmse
+import numpy as np
+import pandas as pd
+def rmse(y_true, y_pred):
+    # TODO: sqrt(mean((y_true - y_pred)^2)) as a float.
+    y_true = np.array(y_true)
+    y_pred = np.array(y_pred)
+
+    if y_true.shape != y_pred.shape:
+        raise ValueError("Shapes of y_true and y_pred must be match")
+    return float(np.sqrt(np.mean((y_true-y_pred)** 2 )))
 
 # Step 12 - dummy_baseline_rmse (not yet solved)
 # TODO: implement
