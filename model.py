@@ -223,8 +223,15 @@ def random_search(pipeline, X, y, n_iter=5, cv=3, random_state=42):
     search.fit(X, y)
     return search
 
-# Step 17 - test_rmse (not yet solved)
-# TODO: implement
+# Step 17 - test_rmse
+import numpy as np
+def test_rmse(model, test_set):
+    # TODO: add ratio features, split, predict with the fitted model, return rmse.
+    test_set = add_ratio_features(test_set)
+    X_test = test_set.drop("median_house_value", axis = 1)
+    y_test = test_set["median_house_value"]
+    predictions = model.predict(X_test)
+    return rmse(y_test,predictions)
 
 # Step 18 - bootstrap_rmse_ci (not yet solved)
 # TODO: implement
