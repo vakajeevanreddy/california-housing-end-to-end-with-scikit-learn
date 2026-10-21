@@ -262,8 +262,25 @@ def feature_importances(search, k=5):
     pairs_sorted = sorted(pairs,key = lambda x : x[0], reverse = True)
     return pairs_sorted[:k]
 
-# Step 20 - worst_errors (not yet solved)
-# TODO: implement
+# Step 20 - worst_errors
+def worst_errors(model, df, k=5):
+    df_ratio = add_ratio_features(df)
+
+    # Split features and target
+    X = df_ratio.drop("median_house_value", axis=1)
+    y = df_ratio["median_house_value"]
+
+    # Predict
+    y_pred = model.predict(X)
+
+    # Error dataframe
+    errors = pd.DataFrame({
+        "actual": y,
+        "predicted": y_pred,
+        "abs_error": np.abs(y - y_pred)
+    }, index=df.index)
+
+    return errors.sort_values("abs_error", ascending=False).head(k)
 
 # Step 21 - save_and_reload (not yet solved)
 # TODO: implement
